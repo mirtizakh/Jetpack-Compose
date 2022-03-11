@@ -13,14 +13,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MainScreen6()
+            GreetingText("Android")
         }
     }
 }
@@ -37,17 +40,18 @@ fun GreetingButton() {
 fun GreetingText(name: String) {
     Text(
         text = " Hello $name!", modifier = Modifier
-            .width(200.dp)
-            .height(240.dp)
+            .width(300.dp)
+            .height(300.dp)
             .padding(24.dp)
             .clickable { },
+
+
         // Order of modifiers matters
 //      style = TextStyle(
 //          color = Color.Blue,
 //          fontWeight = FontWeight.Bold,
 //          fontSize = 18.sp)
         style = MaterialTheme.typography.h3
-
     )
 }
 
@@ -126,7 +130,7 @@ fun MainScreen4() {
             )
             Text(
                 "Wrapped content 123",
-                style = MaterialTheme.typography.h4
+                style = MaterialTheme.typography.h3
             )
         }
     }
@@ -144,13 +148,13 @@ fun MainScreen5() {
         Row {
             Surface(
                 color = Color.Magenta,
-                modifier = Modifier.size(60.dp, 300.dp)
+                modifier = Modifier.size(100.dp, 300.dp)
             ) {
 
             }
             Surface(
                 color = Color.Red,
-                modifier = Modifier.size(60.dp, 300.dp)
+                modifier = Modifier.size(100.dp, 300.dp)
             ) {
 
             }
@@ -170,19 +174,19 @@ fun MainScreen6() {
         modifier = Modifier.fillMaxSize()
     ) {
         Row {
-            Surface(
-                color = Color.Magenta,
-                modifier = Modifier.size(60.dp, 300.dp)
-            ) {
-
-            }
-            Surface(
-                color = Color.Red,
-                modifier = Modifier.size(60.dp, 300.dp)
-            ) {
-
-            }
+            HorizontalColoredBar(Color.Magenta)
+            HorizontalColoredBar(Color.Red)
+            HorizontalColoredBar(Color.Blue)
         }
+    }
+}
+
+@Composable
+fun HorizontalColoredBar(color: Color){
+    Surface(
+        color = color,
+        modifier = Modifier.size(60.dp, 300.dp)
+    ) {
 
     }
 }
