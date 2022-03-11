@@ -20,8 +20,16 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MainScreen4()
+            MainScreen6()
         }
+    }
+}
+
+@Composable
+fun GreetingButton() {
+    Button(onClick = { }) {
+        GreetingText("Android123")
+        GreetingText("Android123")
     }
 }
 
@@ -89,7 +97,7 @@ fun MainScreen3() {
         Surface(
             color = Color.Magenta,
             modifier = Modifier.wrapContentSize(align = Alignment.BottomCenter)
-        // cant use Alignment.CenterHorizontally
+            // cant use Alignment.CenterHorizontally
         ) {
             Text(
                 "Wrapped content",
@@ -124,16 +132,63 @@ fun MainScreen4() {
     }
 }
 
+// Row, Column and Box in composable
+// Creating basic layout with Row
+// Overlapping issue resolved
 @Composable
-fun GreetingButton() {
-    Button(onClick = { }) {
-        GreetingText("Android123")
-        GreetingText("Android123")
+fun MainScreen5() {
+    Surface(
+        color = Color.DarkGray,
+        modifier = Modifier.fillMaxSize()
+    ) {
+        Row {
+            Surface(
+                color = Color.Magenta,
+                modifier = Modifier.size(60.dp, 300.dp)
+            ) {
+
+            }
+            Surface(
+                color = Color.Red,
+                modifier = Modifier.size(60.dp, 300.dp)
+            ) {
+
+            }
+        }
+
+    }
+}
+
+// Row, Column and Box in composable
+// Creating basic layout with Row
+// Overlapping issue resolved
+// Extract composable for reuse
+@Composable
+fun MainScreen6() {
+    Surface(
+        color = Color.DarkGray,
+        modifier = Modifier.fillMaxSize()
+    ) {
+        Row {
+            Surface(
+                color = Color.Magenta,
+                modifier = Modifier.size(60.dp, 300.dp)
+            ) {
+
+            }
+            Surface(
+                color = Color.Red,
+                modifier = Modifier.size(60.dp, 300.dp)
+            ) {
+
+            }
+        }
+
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreviewMainActivity() {
-    MainScreen4()
+    MainScreen6()
 }
