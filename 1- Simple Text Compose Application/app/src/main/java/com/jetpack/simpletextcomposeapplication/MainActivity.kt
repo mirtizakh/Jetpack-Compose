@@ -99,7 +99,8 @@ fun MainScreen3() {
     }
 }
 
-// Align composables with wrap content
+// Multiple composables inside a parent
+// Overlapping issue
 @Composable
 fun MainScreen4() {
     Surface(
@@ -113,6 +114,10 @@ fun MainScreen4() {
         ) {
             Text(
                 "Wrapped content",
+                style = MaterialTheme.typography.h4
+            )
+            Text(
+                "Wrapped content 123",
                 style = MaterialTheme.typography.h4
             )
         }
