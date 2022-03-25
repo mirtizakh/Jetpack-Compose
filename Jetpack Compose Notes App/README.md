@@ -1,2 +1,3 @@
 # Jetpack-Compose
-Modern Android apps with Jetpack Compose and integrations: MVVM, Coroutines, ViewModel, LiveData, Retrofit, Navigation
+Clean Architecture Note App (MVVM / CRUD / Jetpack Compose) <br>
+Guide Link https://www.youtube.com/watch?v=8YPXv7xKh2w
