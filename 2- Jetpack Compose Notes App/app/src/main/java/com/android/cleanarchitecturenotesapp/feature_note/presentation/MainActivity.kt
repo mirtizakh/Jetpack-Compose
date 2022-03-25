@@ -1,4 +1,4 @@
-package com.android.cleanarchitecturenotesapp
+package com.android.cleanarchitecturenotesapp.feature_note.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CleanArchitectureNotesAppTheme {
-                
+
             }
         }
     }
