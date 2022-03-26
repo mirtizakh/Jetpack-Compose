@@ -9,11 +9,11 @@ class NoteRepositoryImp(
     private val noteDao: NoteDao
 ) : NoteRepositoryInterface {
     override fun getNotes(): Flow<List<Note>> {
-        noteDao.getNotes()
+        return noteDao.getNotes()
     }
 
     override suspend fun getNoteById(id: Int): Note? {
-        noteDao.getNoteById(id)
+        return noteDao.getNoteById(id)
     }
 
     override suspend fun insertNote(note: Note) {
