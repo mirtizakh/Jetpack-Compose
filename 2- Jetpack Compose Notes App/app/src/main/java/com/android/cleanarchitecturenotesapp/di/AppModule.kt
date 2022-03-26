@@ -6,6 +6,7 @@ import com.android.cleanarchitecturenotesapp.feature_note.data.data_source.NoteD
 import com.android.cleanarchitecturenotesapp.feature_note.data.data_source.NoteDatabase.Companion.DATABASE_NAME
 import com.android.cleanarchitecturenotesapp.feature_note.data.repository.NoteRepositoryImp
 import com.android.cleanarchitecturenotesapp.feature_note.domain.repository.NoteRepositoryInterface
+import com.android.cleanarchitecturenotesapp.feature_note.domain.use_case.AddNoteUseCase
 import com.android.cleanarchitecturenotesapp.feature_note.domain.use_case.DeleteNoteUseCase
 import com.android.cleanarchitecturenotesapp.feature_note.domain.use_case.GetNotesUseCase
 import com.android.cleanarchitecturenotesapp.feature_note.domain.use_case.NotesUseCases
@@ -40,7 +41,8 @@ object AppModule {
     fun providesNotesUseCases(repository: NoteRepositoryInterface): NotesUseCases {
         return NotesUseCases(
             getNotesUseCase = GetNotesUseCase(repository),
-            deleteNoteUseCase = DeleteNoteUseCase(repository)
+            deleteNoteUseCase = DeleteNoteUseCase(repository),
+            addNoteUseCase = AddNoteUseCase(repository)
         )
     }
 }
