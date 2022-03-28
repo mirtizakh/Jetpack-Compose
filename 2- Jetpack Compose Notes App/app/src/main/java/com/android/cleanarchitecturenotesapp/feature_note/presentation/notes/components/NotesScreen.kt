@@ -98,7 +98,7 @@ fun NotesScreen(
                                     message = "Note Deleted",
                                     actionLabel = "Undo"
                                 )
-                                if(result == SnackbarResult.ActionPerformed){
+                                if (result == SnackbarResult.ActionPerformed) {
                                     notesViewModel.onEvent(NotesEvent.RestoreNote)
                                 }
                             }
