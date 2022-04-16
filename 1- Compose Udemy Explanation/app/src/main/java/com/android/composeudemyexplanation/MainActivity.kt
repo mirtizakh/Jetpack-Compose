@@ -11,11 +11,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            GreetingText("Android")
+            GreetingButtonMultiText()
         }
     }
 }
-
 
 
 @Preview(showBackground = true)
@@ -23,6 +22,6 @@ class MainActivity : ComponentActivity() {
 // We can give any name to this preview function
 fun DefaultPreviewMainActivity() {
     ComposeUdemyExplanationTheme {
-        GreetingText("Android")
+        GreetingButtonMultiText()
     }
 }
