@@ -11,7 +11,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MaterialGreetingText("Android")
+            InnerSurfaceComposable()
         }
     }
 }
@@ -21,7 +21,5 @@ class MainActivity : ComponentActivity() {
 @Composable
 // We can give any name to this preview function
 fun DefaultPreviewMainActivity() {
-    ComposeUdemyExplanationTheme {
-        MaterialGreetingText("Android")
-    }
+    InnerSurfaceComposable()
 }
