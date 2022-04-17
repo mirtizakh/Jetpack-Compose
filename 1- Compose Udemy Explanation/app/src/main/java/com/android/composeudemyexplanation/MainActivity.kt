@@ -11,7 +11,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            InnerSurfaceComposable()
+            RowComposable()
         }
     }
 }
@@ -21,5 +21,5 @@ class MainActivity : ComponentActivity() {
 @Composable
 // We can give any name to this preview function
 fun DefaultPreviewMainActivity() {
-    InnerSurfaceComposable()
+    RowComposable()
 }

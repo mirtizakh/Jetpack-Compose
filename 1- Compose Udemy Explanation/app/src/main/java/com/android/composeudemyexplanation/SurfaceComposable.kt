@@ -42,3 +42,27 @@ fun InnerSurfaceComposable() {
         }
     }
 }
+
+// Multiple composables inside a parent
+// we will face overlapping issue , to solve this we need to use Row , Column , Box
+@Composable
+fun MultipleComposablesInsideSurfaceComposable() {
+    Surface(
+        color = Color.DarkGray,
+        modifier = Modifier.fillMaxSize()
+    ) {
+        Surface(
+            color = Color.Magenta,
+            modifier = Modifier.wrapContentSize(align = Alignment.BottomCenter)
+        ) {
+            Text(
+                text = "Wrapped Content",
+                style = MaterialTheme.typography.h3
+            )
+            Text(
+                text = "Wrapped Content",
+                style = MaterialTheme.typography.h4
+            )
+        }
+    }
+}
