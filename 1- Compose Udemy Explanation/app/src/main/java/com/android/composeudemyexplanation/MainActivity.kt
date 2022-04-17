@@ -11,7 +11,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            GreetingTextWithFillMaxWidthModifier("Android")
+            MaterialGreetingText("Android")
         }
     }
 }
@@ -22,6 +22,6 @@ class MainActivity : ComponentActivity() {
 // We can give any name to this preview function
 fun DefaultPreviewMainActivity() {
     ComposeUdemyExplanationTheme {
-        GreetingTextWithFillMaxWidthModifier("Android")
+        MaterialGreetingText("Android")
     }
 }
