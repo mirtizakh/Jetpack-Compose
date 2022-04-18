@@ -17,15 +17,17 @@ fun RowComposable() {
         modifier = Modifier.fillMaxSize()
     ) {
         Row {
-            Surface(
-                color = Color.Magenta,
-                modifier = Modifier.size(60.dp, 200.dp)
-            ) {}
-
-            Surface(
-                color = Color.Red,
-                modifier = Modifier.size(60.dp, 200.dp)
-            ) {}
+            HorizontalColumnBar(Color.Magenta)
+            HorizontalColumnBar(Color.Red)
+            HorizontalColumnBar(Color.Blue)
         }
     }
+}
+
+@Composable
+fun HorizontalColumnBar(color : Color){
+    Surface(
+        color = color,
+        modifier = Modifier.size(60.dp, 600.dp)
+    ) {}
 }
