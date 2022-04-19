@@ -17,19 +17,19 @@ fun ColumnComposable() {
         Column(verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            HorizontalRowBar(Color.Magenta)
-            HorizontalRowBar(Color.Red)
-            HorizontalRowBar(Color.Blue)
-            HorizontalRowBar(Color.Yellow)
-            HorizontalColumnBar(Color.Green)
+            VerticalColoredBar(Color.Magenta)
+            VerticalColoredBar(Color.Red)
+            VerticalColoredBar(Color.Blue)
+            VerticalColoredBar(Color.Yellow)
+            VerticalColoredBar(Color.Green)
         }
     }
 }
 
 @Composable
-fun HorizontalRowBar(color: Color) {
+fun VerticalColoredBar(color: Color) {
     Surface(
         color = color,
-        modifier = Modifier.size(60.dp, 600.dp)
+        modifier = Modifier.size(350.dp, 100.dp)
     ) {}
 }
