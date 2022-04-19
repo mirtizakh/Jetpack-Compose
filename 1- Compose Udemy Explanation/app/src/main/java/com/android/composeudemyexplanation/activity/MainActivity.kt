@@ -1,17 +1,17 @@
-package com.android.composeudemyexplanation
+package com.android.composeudemyexplanation.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.android.composeudemyexplanation.ui.theme.ComposeUdemyExplanationTheme
+import com.android.composeudemyexplanation.NestedRowWithColumnComposable
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ColumnComposable()
+            NestedRowWithColumnComposable()
         }
     }
 }
@@ -21,5 +21,5 @@ class MainActivity : ComponentActivity() {
 @Composable
 // We can give any name to this preview function
 fun DefaultPreviewMainActivity() {
-    ColumnComposable()
+    NestedRowWithColumnComposable()
 }
