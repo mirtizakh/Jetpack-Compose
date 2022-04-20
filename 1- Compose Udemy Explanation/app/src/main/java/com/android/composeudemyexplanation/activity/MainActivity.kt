@@ -5,13 +5,14 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.android.composeudemyexplanation.NestedRowWithColumnComposable
+import com.android.composeudemyexplanation.composables.DynamicContentComposable
+import com.android.composeudemyexplanation.composables.namesList
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            NestedRowWithColumnComposable()
+            DynamicContentComposable(namesList)
         }
     }
 }
@@ -21,5 +22,5 @@ class MainActivity : ComponentActivity() {
 @Composable
 // We can give any name to this preview function
 fun DefaultPreviewMainActivity() {
-    NestedRowWithColumnComposable()
+    DynamicContentComposable(namesList)
 }
