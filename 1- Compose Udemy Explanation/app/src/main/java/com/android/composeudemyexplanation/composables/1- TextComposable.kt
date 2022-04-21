@@ -25,7 +25,8 @@ fun GreetingTextWithModifier(name: String) {
         text = " Hello $name!",
         modifier = Modifier
             .width(80.dp)
-            .height(80.dp)
+            .height(80.dp),
+        style = MaterialTheme.typography.h5
     )
 }
 

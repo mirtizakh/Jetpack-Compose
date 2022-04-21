@@ -5,14 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.android.composeudemyexplanation.composables.DynamicContentComposable
-import com.android.composeudemyexplanation.composables.namesList
+import com.android.composeudemyexplanation.composables.DynamicListComposable
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DynamicContentComposable(namesList)
+            DynamicListComposable()
         }
     }
 }
@@ -22,5 +21,5 @@ class MainActivity : ComponentActivity() {
 @Composable
 // We can give any name to this preview function
 fun DefaultPreviewMainActivity() {
-    DynamicContentComposable(namesList)
+    DynamicListComposable()
 }
